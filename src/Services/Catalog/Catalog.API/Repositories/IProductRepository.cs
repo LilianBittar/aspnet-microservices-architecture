@@ -1,6 +1,8 @@
+using Catalog.API.Entities;
+
 namespace Catalog.API.Repositories;
 
-public class IProductRepository
+public interface IProductRepository
 {
     Task<IEnumerable<Product>> GetProducts();
     Task<Product> GetProduct(string id);

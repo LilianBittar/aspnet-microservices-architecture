@@ -1,3 +1,7 @@
+using Catalog.API.Data;
+using Catalog.API.Entities;
+using MongoDB.Driver;
+
 namespace  Catalog.API.Repositories;
 
 public class ProductRepository : IProductRepository
