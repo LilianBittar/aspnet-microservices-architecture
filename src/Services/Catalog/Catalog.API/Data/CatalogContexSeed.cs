@@ -1,3 +1,6 @@
+using Catalog.API.Entities;
+using MongoDB.Driver;
+
 namespace  Catalog.API.Data;
 
 public class CatalogContextSeed
@@ -5,7 +8,7 @@ public class CatalogContextSeed
     public static void SeedData(IMongoCollection<Product> productCollection)
     {
         bool exitProduct = productCollection.Find(p => true).Any();
-        if (!existProduct)
+        if (!exitProduct)
         {
             productCollection.InsertManyAsync(GetPreconfiguredProducts());
         }
