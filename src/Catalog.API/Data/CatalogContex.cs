@@ -7,7 +7,6 @@ public class CatalogContext : ICatalogContext
 {
     public IMongoCollection<Product> Products { get; }
 
-    IMongoCollection<Product> ICatalogContext.Products => throw new NotImplementedException();
 
     public CatalogContext(IConfiguration configuration)
     {
