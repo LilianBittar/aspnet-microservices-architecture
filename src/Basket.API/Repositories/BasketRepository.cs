@@ -1,3 +1,7 @@
+using Basket.API.Entities;
+using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
+
 namespace Basket.API.Repositories;
 
   public class BasketRepository : IBasketRepository
@@ -30,4 +34,5 @@ namespace Basket.API.Repositories;
         {
             await _redisCache.RemoveAsync(userName);
         }
-    }
+
+}
