@@ -10,10 +10,10 @@ namespace Basket.API.Repositories;
 
         public BasketRepository(IDistributedCache redisCache)
         {
-            _redisCache = redisCache ?? throw new ArgumentNullException(nameof(redisCache));
+            _redisCache = redisCache;
         }
 
-        public async Task<ShoppingCart> GetBasket(string userName)
+        public async Task<ShoppingCart?> GetBasket(string userName)
         {
             var basket = await _redisCache.GetStringAsync(userName);
             
@@ -23,10 +23,9 @@ namespace Basket.API.Repositories;
             return JsonConvert.DeserializeObject<ShoppingCart>(basket);
         }
 
-        public async Task<ShoppingCart> UpdateBasket(ShoppingCart basket)
+        public async Task<ShoppingCart?> UpdateBasket(ShoppingCart basket)
         {
             await _redisCache.SetStringAsync(basket.UserName, JsonConvert.SerializeObject(basket));
-
             return await GetBasket(basket.UserName);
         }
 
