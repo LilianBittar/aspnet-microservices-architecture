@@ -32,7 +32,13 @@ services:
     image: ${DOCKER_REGISTRY-}discountapi
     build:
       context: .
-      dockerfile: src/Discount.API/Dockerfile      
+      dockerfile: src/Discount.API/Dockerfile   
+      
+  discount.grpc:
+    image: ${DOCKER_REGISTRY-}discountgrpc
+    build:
+      context: .
+      dockerfile: src/Discount.GRPC/Dockerfile       
 
 volumes:
   mongo_data:
