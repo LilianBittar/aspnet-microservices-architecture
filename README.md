@@ -1,5 +1,5 @@
 # aspnet-microservices-architecture
-### An e - commerce system for selling different technologicals products 👾. It represents a proof of concept example for building an application based on microservices architecture.
+ An e - commerce system for selling different technologicals products 👾. It represents a proof of concept example for building an application based on microservices architecture.
 
 # Architecture: 
 <p align="center">
