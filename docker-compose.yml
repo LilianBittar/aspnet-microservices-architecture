@@ -47,7 +47,10 @@ services:
     image: ${DOCKER_REGISTRY-}orderingapi
     build:
       context: .
-      dockerfile: src/Ordering.API/Dockerfile        
+      dockerfile: src/Ordering.API/Dockerfile    
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine        
 
 volumes:
   mongo_data:
