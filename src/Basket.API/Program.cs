@@ -1,3 +1,4 @@
+using System.Reflection;
 using Basket.API.GrpcService;
 using Basket.API.Repositories;
 using Discount.GRPC.Protos;
@@ -12,6 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddStackExchangeRedisCache(opt =>
 {
     opt.Configuration = builder.Configuration["CacheSettings:ConnectionString"];
