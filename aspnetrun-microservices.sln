@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
@@ -22,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Infrastructure", "src\Ordering.Infrastructure\Ordering.Infrastructure.csproj", "{23788B1F-0351-4C0D-8AE1-DC4C3B505774}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Messages", "src\EventBus.Messages\EventBus.Messages.csproj", "{D8C44400-7930-4636-A3D2-8B18D26A2297}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApiGw", "src\OcelotApiGw\OcelotApiGw.csproj", "{B9502702-17B7-4926-A7C6-935166E303DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +70,10 @@ Global
 		{D8C44400-7930-4636-A3D2-8B18D26A2297}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8C44400-7930-4636-A3D2-8B18D26A2297}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8C44400-7930-4636-A3D2-8B18D26A2297}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9502702-17B7-4926-A7C6-935166E303DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9502702-17B7-4926-A7C6-935166E303DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9502702-17B7-4926-A7C6-935166E303DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9502702-17B7-4926-A7C6-935166E303DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{03C35CF6-D471-4F2C-AB4A-527A3BB42431} = {6296AF28-2CE6-4AAE-9520-43085BDC85A2}
@@ -79,5 +85,6 @@ Global
 		{F52CAACC-7E1A-4E1E-A780-8F83D7AC954A} = {6296AF28-2CE6-4AAE-9520-43085BDC85A2}
 		{23788B1F-0351-4C0D-8AE1-DC4C3B505774} = {6296AF28-2CE6-4AAE-9520-43085BDC85A2}
 		{D8C44400-7930-4636-A3D2-8B18D26A2297} = {6296AF28-2CE6-4AAE-9520-43085BDC85A2}
+		{B9502702-17B7-4926-A7C6-935166E303DF} = {6296AF28-2CE6-4AAE-9520-43085BDC85A2}
 	EndGlobalSection
 EndGlobal
