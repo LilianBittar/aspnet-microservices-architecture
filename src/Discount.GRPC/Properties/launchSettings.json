@@ -1,10 +1,11 @@
 {
   "profiles": {
-    "Discount.GRPC": {
+    "Default": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": false,
-      "applicationUrl": "http://localhost:5159;https://localhost:7132",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:8004",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
