@@ -114,6 +114,6 @@
         }
     ],
     "GlobaleConfiguration": {
-        "BaseUrl": "http://localhost:7010"
+        "BaseUrl": "http://localhost:5010"
     }
 }
