@@ -49,6 +49,12 @@ services:
       context: .
       dockerfile: src/Ordering.API/Dockerfile    
 
+  ocelotapigw:
+    image: ${DOCKER_REGISTRY-}ocelotapigw
+    build:
+      context: .
+      dockerfile: ApiGateways/OcelotApiGw/Dockerfile    
+
   rabbitmq:
     image: rabbitmq:3-management-alpine        
 
