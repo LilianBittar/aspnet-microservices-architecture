@@ -53,7 +53,7 @@ services:
     image: ${DOCKER_REGISTRY-}ocelotapigw
     build:
       context: .
-      dockerfile: ApiGateways/OcelotApiGw/Dockerfile    
+      dockerfile: src/OcelotApiGw/Dockerfile    
 
   rabbitmq:
     image: rabbitmq:3-management-alpine        
