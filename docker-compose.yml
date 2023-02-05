@@ -47,16 +47,22 @@ services:
     image: ${DOCKER_REGISTRY-}orderingapi
     build:
       context: .
-      dockerfile: src/Ordering.API/Dockerfile    
+      dockerfile: src/Ordering.API/Dockerfile       
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine        
 
   ocelotapigw:
     image: ${DOCKER_REGISTRY-}ocelotapigw
     build:
       context: .
-      dockerfile: src/OcelotApiGw/Dockerfile    
+      dockerfile: src/OcelotApiGw/Dockerfile 
 
-  rabbitmq:
-    image: rabbitmq:3-management-alpine        
+  shopping.aggregator:
+    image: ${DOCKER_REGISTRY-}shoppingaggregator
+    build:
+      context: .
+      dockerfile: src/Shopping.Aggregator/Dockerfile     
 
 volumes:
   mongo_data:
