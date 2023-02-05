@@ -8,7 +8,7 @@ services:
       - "27017:27017"
     volumes:
       - mongo_data:/data/db
-  
+
   basketdb:
     container_name: basketdb
     restart: always
@@ -34,7 +34,7 @@ services:
       - ACCEPT_EULA=Y
     restart: always
     ports:
-      - "1433:1433"    
+      - "1433:1433"
 
   pgadmin:
     container_name: pgadmin
@@ -45,7 +45,7 @@ services:
     ports:
       - "5050:80"
     volumes:
-      - pgadmin_data:/root/.pgadmin        
+      - pgadmin_data:/root/.pgadmin
 
   portainer:
     container_name: portainer
@@ -78,7 +78,7 @@ services:
       - basketdb
       - rabbitmq
     ports:
-      - "8001:80"    
+      - "8001:80"
 
   discount.api:
     container_name: discount.api
@@ -88,7 +88,7 @@ services:
     depends_on:
       - discountdb
     ports:
-      - "8002:80"   
+      - "8002:80"
 
   discount.grpc:
     container_name: discount.grpc
@@ -98,7 +98,7 @@ services:
     depends_on:
       - discountdb
     ports:
-      - "8003:80"     
+      - "8003:80"
 
   ordering.api:
     container_name: ordering.api
@@ -120,9 +120,23 @@ services:
       - catalog.api
       - basket.api
       - discount.api
-      - ordering.api  
+      - ordering.api
     ports:
-      - "8010:80"   
+      - "8010:80"
+
+  shopping.aggregator:
+    container_name: shopping.aggregator
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ApiSettings:CatalogUrl=http://catalog.api"
+      - "ApiSettings:BasketUrl=http://basket.api"
+      - "ApiSettings:OrderingUrl=http://ordering.api"
+    depends_on:
+      - catalog.api
+      - basket.api
+      - ordering.api
+    ports:
+      - "8005:80"
 
   rabbitmq:
     container_name: rabbitmq
@@ -130,4 +144,3 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
-
