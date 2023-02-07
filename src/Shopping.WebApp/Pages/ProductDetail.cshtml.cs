@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Shopping.WebApp.Models;
-using Shopping.WebApp.Repositories;
+
 using Shopping.WebApp.Services;
 
 namespace Shopping.WebApp
