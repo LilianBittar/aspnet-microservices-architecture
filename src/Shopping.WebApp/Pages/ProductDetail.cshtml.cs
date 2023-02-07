@@ -9,7 +9,7 @@ namespace Shopping.WebApp
 {
     public class ProductDetailModel : PageModel
     {
-       private readonly ICatalogService _catalogService;
+        private readonly ICatalogService _catalogService;
         private readonly IBasketService _basketService;
 
         public ProductDetailModel(ICatalogService catalogService, IBasketService basketService)
@@ -58,7 +58,7 @@ namespace Shopping.WebApp
             });
 
             var basketUpdated = await _basketService.UpdateBasket(basket);
-            
+
             return RedirectToPage("Cart");
         }
     }
