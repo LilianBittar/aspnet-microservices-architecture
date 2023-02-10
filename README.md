@@ -3,7 +3,17 @@
 
 # Architecture: 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/1147445/110304529-c5b70180-800c-11eb-832b-a2751b5bda76.png" alt="Preview">
+    <img src="assets/bigpicture.png" alt="Preview">
+</p>
+
+# Ordering microservice architecture
+<p align="center">
+    <img src="assets/architecture.png" alt="Preview">
+</p>
+
+# Web app
+<p align="center">
+    <img src="assets/ux.png" alt="Preview">
 </p>
 
 
